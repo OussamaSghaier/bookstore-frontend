@@ -1,0 +1,49 @@
+
+
+/* HEADER CSS SEPARATOR*/
+header.masthead {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  header.masthead h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  
+  header.masthead h2 {
+    font-size: 1.3rem;
+    font-family: 'Lato';
+  }
+  
+  @media (min-width: 992px) {
+    header.masthead {
+      padding-top: calc(6rem);
+      padding-bottom: 6rem;
+    }
+    header.masthead h1 {
+      font-size: 4.75em;
+      line-height: 4rem;
+    }
+    header.masthead h2 {
+      font-size: 1.75em;
+    }
+  }
+
+  header{
+	background-color: #18BC9C
+  }
+
+
+
+
+
+
+  /* form */
+  #success_message{ display: block;}
+  .centre{
+	display: block;
+    margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+  }

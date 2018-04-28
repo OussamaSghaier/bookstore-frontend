@@ -1,0 +1,24 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600');
+@import url('assets/plugins/fontawesome/css/font-awesome.css');
+
+@import url('assets/plugins/bootstrap/css/bootstrap.min.css');
+@import url('assets/plugins/pace-master/themes/blue/pace-theme-flash.css');
+@import url('assets/plugins/uniform/css/uniform.default.min.css');
+@import url('assets/plugins/line-icons/simple-line-icons.css');
+@import url('assets/plugins/offcanvasmenueffects/css/menu_cornerbox.css');
+@import url('assets/plugins/waves/waves.min.css');
+@import url('assets/plugins/switchery/switchery.min.css');
+@import url('assets/plugins/3d-bold-navigation/css/style.css');
+@import url('assets/plugins/slidepushmenus/css/component.css');
+
+
+@import url('assets/css/modern.min.css');
+@import url('assets/css/custom.css');
+@import url('assets/css/themes/green.css');
+
+
+.page-error {
+  width: 100%;
+  font-family: 'Open Sans',sans-serif;
+  background: #ccc;
+}

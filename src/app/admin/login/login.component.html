@@ -1,0 +1,35 @@
+<div class="page-login">
+<main class="page-content">
+  <div class="page-inner">
+    <div id="main-wrapper">
+      <div class="row">
+        <div class="col-md-3 center">
+          <div class="login-box">
+            <a href="/admin" class="logo-name text-lg text-center">BookStore Administration</a>
+            <p class="text-center m-t-md">Please login into your admin account.</p>
+            <form class="m-t-md" (ngSubmit)="login(mail, password )" #loginForm="ngForm" >
+              <div class="form-group">
+                <input type="email" class="form-control" required name="mail" ngModel  placeholder="Email" #mail/>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" required  ngModel  name="password" placeholder="Password" #password />
+              </div>
+              <button type="submit" [disabled]="!loginForm.form.valid" class="btn btn-success btn-block">Login</button>
+            </form>
+            <p class="text-center m-t-xs text-sm">2018 &copy; Modern by Oussama & Amine.</p>
+            <p class="text-center m-t-xs text-sm">2015 &copy; Modern by Steelcoders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+</div>
+
+
+<div class="alert-top-right">
+  <p *ngFor="let alert of alerts">
+    <ngb-alert [dismissible]="false" [type]="alert.type" >{{ alert.message }}</ngb-alert>
+  </p>
+</div>

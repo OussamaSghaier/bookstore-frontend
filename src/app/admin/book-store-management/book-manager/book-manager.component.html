@@ -1,0 +1,76 @@
+<div class="page-title">
+  <h3>Books Management</h3>
+</div>
+<div id="main-wrapper">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-white">
+        <div class="panel-heading clearfix">
+          <h4 class="panel-title">Gallery</h4>
+          <div class="panel-control">
+            <button type="button" class="btn btn-success m-b-sm" (click)="new()">Add New book</button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="inbox-widget slimscroll" style="overflow: hidden; width: auto; height: 100%;">
+            <div class="inbox-item" *ngFor="let book of books" (click)="onSelect(book)" [class.selected]="book === selectedBook">
+              <div class="inbox-item-img">
+                <img src="{{book.image_url}}"  alt="">
+              </div>
+              <p class="inbox-item-author">{{book.title}}</p>
+              <p class="inbox-item-text">{{book.genre}}</p>
+              <p class="inbox-item-date">{{book.price}}$</p>
+            </div>
+          </div>
+            <div class="slimScrollBar" style="background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 0.3; display: none; border-radius: 0px; z-index: 99; right: 0px; height: 298.923px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 0px;"></div></div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selectedBook" class="col-md-6">
+      <div class="panel panel-white">
+        <div class="panel-heading clearfix">
+          <h4 class="panel-title">Book Form</h4>
+          <div class="panel-control">
+            <button type="button" class="btn btn-danger m-b-sm" (click)="delete()">Delete book</button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <form #loginForm="ngForm" >
+            <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control" name="title" required placeholder="Enter book Title" [(ngModel)]="selectedBook.title">
+            </div>
+            <div class="form-group">
+              <label>Genre</label>
+              <input type="text" class="form-control" name="genre" required  placeholder="Enter book Genre" [(ngModel)]="selectedBook.genre">
+            </div>
+            <div class="form-group">
+              <label>Author</label>
+              <input type="text" class="form-control" required placeholder="Enter book Author" [(ngModel)]="selectedBook.author" name="author">
+            </div>
+            <div class="form-group">
+              <label>Price</label>
+              <input type="number" class="form-control" required name="price" placeholder="Enter book Price" [(ngModel)]="selectedBook.price">
+            </div>
+
+            <div class="form-group">
+              <label>Image url</label>
+              <input type="text" class="form-control" name="url" placeholder="Enter book imageurl" [(ngModel)]="selectedBook.image_url">
+            </div>
+
+            <div class="form-group">
+              <label>Description</label>
+              <textarea class="form-control" name="'description" placeholder="Describe yourself here..." [(ngModel)]="selectedBook.description"></textarea>
+            </div>
+
+            <button (click)="submit()" [disabled]="!loginForm.form.valid" type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div><!-- Row -->
+</div><!-- Main Wrapper -->
+<div class="page-footer">
+  <p class="no-s">2018 &copy; by Oussama and Amine</p>
+  <p class="no-s">2015 &copy; Modern by Steelcoders.</p>
+</div>

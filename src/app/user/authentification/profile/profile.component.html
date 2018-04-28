@@ -1,0 +1,95 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="fb-profile">
+        <img style="height: 400px;" align="left" class="fb-image-lg" src="http://www.cedarscaregroup.co.uk/wp-content/uploads/2017/09/BookClub_Banner.jpg" alt="Profile image example"/>
+        <img style="height: 200px; width:200px ; margin-left: 137px;" align="left" class="fb-image-profile thumbnail" 
+        src= "{{ user?.image != null ? user?.image : 'https://image.freepik.com/free-icon/user-male-silhouette_318-55563.jpg' }}" alt="Profile image example"/>
+        <!-- "https://image.freepik.com/free-icon/user-male-silhouette_318-55563.jpg" -->
+        
+        
+        <div class="fb-profile-text">
+            <h1>{{ user?.username == '' ? 'Foulen Ben Falten' : user?.username }}</h1>
+            
+        </div>
+    </div>
+  </div>
+</div> <!-- /container fluid-->  
+<div class="container">
+  <div class="col-sm-8">
+
+      <div data-spy="scroll" class="tabbable-panel">
+        <div class="tabbable-line">
+          <ul class="nav nav-tabs ">
+            <li class="active">
+              <a href="#tab_default_1" data-toggle="tab">
+               Basket</a>
+            </li>
+            <li>
+              <a href="#tab_default_2" data-toggle="tab">
+                  Favourite Books</a>
+            </li>
+            <li>
+              <a href="#tab_default_3" data-toggle="tab">
+                  Favourite Genders</a>
+            </li>
+             <li>
+              <a href="#tab_default_4" data-toggle="tab">
+                Bought Books</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+
+            <div class="tab-pane active" id="tab_default_1">
+ 
+              <p>
+                This zone will contain the selected books ... This zone will contain the selected books ...
+                This zone will contain the selected books ... This zone will contain the selected books ...
+                This zone will contain the selected books ... This zone will contain the selected books ...
+                This zone will contain the selected books ... This zone will contain the selected books ...
+                This zone will contain the selected books ... This zone will contain the selected books ...
+                This zone will contain the selected books ... This zone will contain the selected books ...
+                This zone will contain the selected books ... This zone will contain the selected books ...
+                This zone will contain the selected books ... This zone will contain the selected books ...
+                This zone will contain the selected books ... This zone will contain the selected books ...
+                This zone will contain the selected books ... This zone will contain the selected books ...
+              </p>
+           
+            </div>
+
+          </div>
+        </div>
+      </div>
+  
+  </div>
+  <div class="col-sm-4">
+   <div class="panel panel-default">
+    <div class="menu_title">
+       <h4><b>Personal Informations</b></h4 >
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-12">
+                 <div class="form-group">
+                     <label for="email">Name</label>
+                      <p>{{ user?.username == "" ? 'Foulen Ben Falten' : user?.username }}</p>
+                 </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <p>{{ user?.username == "" ? 'bookstore@email.insat' : user?.username + '@gmail.com' }}</p>
+                  </div>
+                      <div class="form-group">
+                      <label for="email">Photo Link</label>
+                      <p>{{ user == null ? 'https://www.imageLink.cpm/image.png' : user?.image }}</p>
+                    </div>
+                <button type="submit" class="btn btn-danger btn-block">Edit &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></button>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+</div>

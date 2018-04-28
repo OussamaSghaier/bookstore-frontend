@@ -1,0 +1,223 @@
+<!-- Header -->
+<header class="masthead text-white text-center">
+  <div class="container">
+    <img class="header-top img-fluid mb-5 d-block mx-auto" src="..\..\..\assets\images\book4.png" alt="BookStore" title="BookStore">
+    <h1 class="text-uppercase mb-0">Registration</h1>
+    <h2 class="text-uppercase mb-0">Online Book Store</h2>
+    <hr class="star-light">
+  </div>
+</header>
+
+
+
+<br/>
+<br/>
+<!-- <div class="container" class="insc-form">
+    <div class="row centered-form">
+    <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Registration Form</h3>
+         </div>
+         <div class="panel-body">
+          <form role="form">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                </div>
+              </div>
+            </div>
+            
+            <input type="submit" value="Register" class="btn btn-info btn-block">
+          
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- FORM -->
+
+
+
+<div class="container">
+
+  <form class="well form-horizontal" method="post" (ngSubmit)="onSubmit()" id="contact_form">
+    <fieldset>
+
+      <!-- Form Name -->
+      <legend class="centre">
+        <h2>
+          <b>Sign Up</b>
+        </h2>
+      </legend>
+      <br>
+
+      <!-- Text input-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">First Name</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input [(ngModel)]="user.firstname" name="firstname" placeholder="First Name" class="form-control" type="text" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Last Name</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input [(ngModel)]="user.lastname" name="lastname" placeholder="Last Name" class="form-control" type="text" required>
+          </div>
+        </div>
+      </div>
+      <!-- 
+<div class="form-group"> 
+<label class="col-md-4 control-label">Department / Office</label>
+  <div class="col-md-4 selectContainer">
+  <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+  <select name="department" class="form-control selectpicker">
+    <option value="">Select your Department/Office</option>
+    <option>Department of Engineering</option>
+    <option>Department of Agriculture</option>
+    <option >Accounting Office</option>
+    <option >Tresurer's Office</option>
+    <option >MPDC</option>
+    <option >MCTC</option>
+    <option >MCR</option>
+    <option >Mayor's Office</option>
+    <option >Tourism Office</option>
+  </select>
+</div>
+</div>
+</div> -->
+
+      <!-- Text input-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Username</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input [(ngModel)]="user.username" name="username" placeholder="Username" class="form-control" type="text" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Password</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input [(ngModel)]="user.password" name="password" placeholder="Password" class="form-control" type="password" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Confirm Password</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input [(ngModel)]="confirmpwd" name="confirmpwd" placeholder="Confirm Password" class="form-control" type="password"
+              required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">E-mail</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-envelope"></i>
+            </span>
+            <input [(ngModel)]="user.email" name="email" placeholder="E-Mail Address" class="form-control" type="email" required>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Text input-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Contact Number</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-earphone"></i>
+            </span>
+            <input [(ngModel)]="user.contactnumber" name="contactnumber" placeholder="(639)" class="form-control" type="text" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+
+      <!-- Success message -->
+      <div class="alert alert-success" role="alert" id="success_message">Success
+        <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <br>
+          <button type="submit" class="btn btn-secondary btn-lg btn-block">REGISTER
+            <span class="glyphicon glyphicon-send"></span>
+          </button>
+          <a class="centre" href="/login">I already have an a account ..</a>
+        </div>
+      </div>
+
+
+
+    </fieldset>
+  </form>
+</div>
+<!-- /.container -->
